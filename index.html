@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiss Ephemeris Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Swiss Ephemeris Calculator</h1>
+        
+        <div class="date-picker">
+            <label for="date">Select Date:</label>
+            <input type="date" id="date" name="date">
+            <button onclick="calculatePositions()">Calculate</button>
+        </div>
+
+        <div class="info-message">
+            Note: This is a demonstration interface. To calculate actual planetary positions, 
+            we'll need to set up a backend server with the Swiss Ephemeris library.
+        </div>
+
+        <div class="results">
+            <table id="positions">
+                <thead>
+                    <tr>
+                        <th>Planet</th>
+                        <th>Sign</th>
+                        <th>Degrees</th>
+                        <th>Minutes</th>
+                        <th>Seconds</th>
+                        <th>Absolute Position</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Data will be populated by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
