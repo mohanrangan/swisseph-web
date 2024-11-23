@@ -5,7 +5,8 @@ from datetime import datetime
 import os
 
 app = Flask(__name__)
-CORS(app)
+# Enable CORS for all domains
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Planet mapping
 PLANETS = {
@@ -86,5 +87,7 @@ def root():
     return jsonify({"message": "Swisseph API is running"}), 200
 
 if __name__ == '__main__':
+    # Get port from environment variable or default to 5000
     port = int(os.environ.get('PORT', 5000))
+    # Important: Listen on all interfaces
     app.run(host='0.0.0.0', port=port)
