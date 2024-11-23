@@ -86,7 +86,7 @@ async function checkBackendHealth() {
     // Show warning if backend is not available
     const infoMessage = document.querySelector('.info-message');
     infoMessage.style.display = 'block';
-    infoMessage.textContent = 'Warning: Server connection issue. Please try again later.';
+    infoMessage.textContent = 'Warning: Server connection issue. The backend may take 30-60 seconds to wake up. Please try again.';
     infoMessage.style.color = '#ff4444';
 }
 
